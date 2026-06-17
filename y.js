@@ -1,4 +1,3 @@
-// في y.js
 fetch('/notes?owner=admin')
   .then(r => r.text())
   .then(html => {
